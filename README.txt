@@ -1,0 +1,1 @@
+ASP.Net mvc 2, Castle active record, spatial queries with sql 2008 and google maps api
