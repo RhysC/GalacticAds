@@ -34,56 +34,65 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
-      <HintPath>..\Library\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\Lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Castle.ActiveRecord">
-      <HintPath>..\Library\Castle.ActiveRecord.dll</HintPath>
+      <HintPath>..\Lib\Castle.ActiveRecord.dll</HintPath>
     </Reference>
     <Reference Include="Castle.ActiveRecord.Linq">
-      <HintPath>..\Library\Castle.ActiveRecord.Linq.dll</HintPath>
+      <HintPath>..\Lib\Castle.ActiveRecord.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Components.Validator">
-      <HintPath>..\Library\Castle.Components.Validator.dll</HintPath>
+      <HintPath>..\Lib\Castle.Components.Validator.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-      <HintPath>..\Library\Castle.Core.dll</HintPath>
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.DynamicProxy2">
-      <HintPath>..\Library\Castle.DynamicProxy2.dll</HintPath>
+      <HintPath>..\Lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging">
+      <HintPath>..\Lib\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\Lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.log4netIntegration">
+      <HintPath>..\Lib\Castle.Services.Logging.log4netIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\Lib\Elmah.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections">
-      <HintPath>..\Library\Iesi.Collections.dll</HintPath>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
-      <HintPath>..\Library\log4net.dll</HintPath>
+      <HintPath>..\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Lucene.Net">
-      <HintPath>..\Library\Lucene.Net.dll</HintPath>
+      <HintPath>..\Lib\Lucene.Net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NHibernate">
-      <HintPath>..\Library\NHibernate.dll</HintPath>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.ByteCode.Castle">
-      <HintPath>..\Library\NHibernate.ByteCode.Castle.dll</HintPath>
+      <HintPath>..\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Linq">
-      <HintPath>..\Library\NHibernate.Linq.dll</HintPath>
+      <HintPath>..\Lib\NHibernate.Linq.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Search">
-      <HintPath>..\Library\NHibernate.Search.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\Library\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\Library\nunit.framework.dll</HintPath>
+      <HintPath>..\Lib\NHibernate.Search.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\Library\System.Data.SQLite.DLL</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -97,7 +106,9 @@
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -113,15 +124,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SolutionVersion.cs">
+      <Link>SolutionVersion.cs</Link>
+    </Compile>
     <Compile Include="ActiveRecordConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertiserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Mappings.cs" />
+    <Compile Include="Models\ViewModels\MapItem.cs" />
+    <Compile Include="Models\ViewModels\ProximityResult.cs" />
+    <Compile Include="Services\DbExtensions.cs" />
+    <Compile Include="Services\LocationQueryService.cs" />
+    <None Include="ActiveRecordConfig.cs.prod" />
+    <None Include="ActiveRecordConfig.cs.dev" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LocationService.cs" />
+    <Compile Include="Services\LocationService.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Advert.cs" />
@@ -136,15 +157,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="SQL\Data\LoadCategories.sql" />
     <Content Include="Views\Advertiser\Create.aspx" />
     <Content Include="Views\Advertiser\Delete.aspx" />
     <Content Include="Views\Advertiser\Details.aspx" />
     <Content Include="Views\Advertiser\Edit.aspx" />
+    <Content Include="Views\Advertiser\FindLocalStores.aspx" />
     <Content Include="Views\Advertiser\Index.aspx" />
     <Content Include="Views\Shared\AddressDetail.ascx" />
     <Content Include="Views\Shared\AddressEdit.ascx" />
-    <Content Include="Views\Store\Map1.aspx" />
     <Content Include="Views\Store\Create.aspx" />
     <Content Include="Views\Store\Delete.aspx" />
     <Content Include="Views\Store\Details.aspx" />

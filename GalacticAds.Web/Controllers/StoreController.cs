@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GalacticAds.Web.Models;
+using GalacticAds.Web.Services;
 
 namespace GalacticAds.Web.Controllers
 {
+    [Authorize]
     public class StoreController : Controller
     {
         public ActionResult Index()

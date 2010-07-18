@@ -1,0 +1,1 @@
+sqlcmd -S "esql2k802.discountasp.net" -U "SQL2008_739878_galacticads_user" -P "zimbabwe"

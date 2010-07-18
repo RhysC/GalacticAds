@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Diagnostics.Contracts;
 using Castle.ActiveRecord;
 using GalacticAds.Web.Models.Interfaces;
 
 namespace GalacticAds.Web.Models
 {
+    /// <summary>
+    /// A store that will recieve reciepts rolls with adverts
+    /// </summary>
     [ActiveRecord]
     public class Store : ActiveRecordBase<Store>, IHaveGeographicalLocation
     {
@@ -15,10 +17,10 @@ namespace GalacticAds.Web.Models
         public int Id { get; set; }
         [Property]
         public string Name { get; set; }
-        [BelongsTo(Cascade = CascadeEnum.SaveUpdate)]
-        public Company Company { get; set; }
-        [Property]
-        public string PhoneNumber { get; set; }
+        //[BelongsTo(Cascade = CascadeEnum.SaveUpdate)]
+        //public Company Company { get; set; }
+        //[Property]
+        //public string PhoneNumber { get; set; }
         [BelongsTo(Cascade = CascadeEnum.SaveUpdate)]
         public Address GeographicalLocation { get; set; }
     }

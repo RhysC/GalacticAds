@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report version="1.0">
+  <metadata>
+    <definitions>Mono 2.4 (Revised)</definitions>
+    <momaversion>2.0.0.0</momaversion>
+    <date>2010-06-29 22:53:46Z</date>
+    <name />
+    <email />
+    <homepage />
+    <organization />
+    <comments />
+    <apptype />
+  </metadata>
+  <assemblies>
+    <assembly name="Antlr3.Runtime.dll" version="3.1.0.39271" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.ActiveRecord.dll" version="2.1.0.0" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
+      <issue type="todo">
+        <class>InPlaceConfigurationSource</class>
+        <caller>void ProcessConfiguration(IConfiguration)</caller>
+        <method>ConnectionStringSettingsCollection get_ConnectionStrings()</method>
+        <raw>System.Configuration.ConnectionStringSettingsCollection System.Configuration.ConfigurationManager::get_ConnectionStrings()</raw>
+        <data />
+      </issue>
+    </assembly>
+    <assembly name="Castle.ActiveRecord.Linq.dll" version="2.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.Components.Validator.dll" version="1.1.1.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.Core.dll" version="1.2.0.0" runtime="2.0" todo="2" niex="1" miss="0" pinv="0">
+      <issue type="todo">
+        <class>DiagnosticsLogger</class>
+        <caller>void .ctor(string, string, string)</caller>
+        <method>bool SourceExists(string, string)</method>
+        <raw>System.Boolean System.Diagnostics.EventLog::SourceExists(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>DiagnosticsLogger</class>
+        <caller>void .ctor(string, string, string)</caller>
+        <method>void CreateEventSource(EventSourceCreationData)</method>
+        <raw>System.Void System.Diagnostics.EventLog::CreateEventSource(System.Diagnostics.EventSourceCreationData)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="niex">
+        <class>SlimReadWriteLock</class>
+        <caller>void .ctor()</caller>
+        <method>void .ctor(LockRecursionPolicy)</method>
+        <raw>System.Void System.Threading.ReaderWriterLockSlim::.ctor(System.Threading.LockRecursionPolicy)</raw>
+      </issue>
+    </assembly>
+    <assembly name="Castle.DynamicProxy2.dll" version="2.2.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.Facilities.Logging.dll" version="2.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.MicroKernel.dll" version="2.1.0.0" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
+      <issue type="todo">
+        <class>RemotingFacility</class>
+        <caller>void SetUpRemotingConfiguration()</caller>
+        <method>void Configure(string, bool)</method>
+        <raw>System.Void System.Runtime.Remoting.RemotingConfiguration::Configure(System.String,System.Boolean)</raw>
+        <data>Implement ensureSecurity</data>
+      </issue>
+    </assembly>
+    <assembly name="Castle.Services.Logging.log4netIntegration.dll" version="1.2.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Castle.Windsor.dll" version="2.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Elmah.dll" version="1.1.11517.0" runtime="2.0" todo="1" niex="5" miss="1" pinv="0">
+      <issue type="todo">
+        <class>ConnectionStringHelper</class>
+        <caller>string GetConnectionString(IDictionary)</caller>
+        <method>ConnectionStringSettingsCollection get_ConnectionStrings()</method>
+        <raw>System.Configuration.ConnectionStringSettingsCollection System.Configuration.ConfigurationManager::get_ConnectionStrings()</raw>
+        <data />
+      </issue>
+      <issue type="niex">
+        <class>JScriptAssertion/PartialTrustEvaluationStrategy</class>
+        <caller>bool Eval(Object)</caller>
+        <method>Object JScriptEvaluate(Object, VsaEngine)</method>
+        <raw>System.Object Microsoft.JScript.Eval::JScriptEvaluate(System.Object,Microsoft.JScript.Vsa.VsaEngine)</raw>
+      </issue>
+      <issue type="niex">
+        <class>JScriptAssertion/FullTrustEvaluationStrategy</class>
+        <caller>bool Eval(Object)</caller>
+        <method>Object CallValue(Object, Object, Object[], bool, bool, VsaEngine)</method>
+        <raw>System.Object Microsoft.JScript.LateBinding::CallValue(System.Object,System.Object,System.Object[],System.Boolean,System.Boolean,Microsoft.JScript.Vsa.VsaEngine)</raw>
+      </issue>
+      <issue type="niex">
+        <class>JScriptAssertion/FullTrustEvaluationStrategy</class>
+        <caller>void .ctor(string, VsaEngine)</caller>
+        <method>LenientGlobalObject get_LenientGlobalObject()</method>
+        <raw>Microsoft.JScript.LenientGlobalObject Microsoft.JScript.Vsa.VsaEngine::get_LenientGlobalObject()</raw>
+      </issue>
+      <issue type="niex">
+        <class>JScriptAssertion/FullTrustEvaluationStrategy</class>
+        <caller>void .ctor(string, VsaEngine)</caller>
+        <method>Object get_Function()</method>
+        <raw>System.Object Microsoft.JScript.LenientGlobalObject::get_Function()</raw>
+      </issue>
+      <issue type="niex">
+        <class>JScriptAssertion/FullTrustEvaluationStrategy</class>
+        <caller>void .ctor(string, VsaEngine)</caller>
+        <method>Object CallValue(Object, Object, Object[], bool, bool, VsaEngine)</method>
+        <raw>System.Object Microsoft.JScript.LateBinding::CallValue(System.Object,System.Object,System.Object[],System.Boolean,System.Boolean,Microsoft.JScript.Vsa.VsaEngine)</raw>
+      </issue>
+      <issue type="miss">
+        <class>JScriptAssertion/PartialTrustEvaluationStrategy</class>
+        <caller>void .ctor(string, VsaEngine)</caller>
+        <method>FieldInfo AddField(string)</method>
+        <raw>System.Reflection.FieldInfo Microsoft.JScript.GlobalScope::AddField(System.String)</raw>
+      </issue>
+    </assembly>
+    <assembly name="GalacticAds.Web.dll" version="0.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Iesi.Collections.dll" version="1.0.1.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="log4net.dll" version="1.2.10.0" runtime="2.0" todo="6" niex="0" miss="0" pinv="17">
+      <issue type="todo">
+        <class>EventLogAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>string LogNameFromSourceName(string, string)</method>
+        <raw>System.String System.Diagnostics.EventLog::LogNameFromSourceName(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>EventLogAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>void DeleteEventSource(string, string)</method>
+        <raw>System.Void System.Diagnostics.EventLog::DeleteEventSource(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>EventLogAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>string LogNameFromSourceName(string, string)</method>
+        <raw>System.String System.Diagnostics.EventLog::LogNameFromSourceName(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>EventLogAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>string LogNameFromSourceName(string, string)</method>
+        <raw>System.String System.Diagnostics.EventLog::LogNameFromSourceName(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>EventLogAppender</class>
+        <caller>void CreateEventSource(string, string, string)</caller>
+        <method>void CreateEventSource(EventSourceCreationData)</method>
+        <raw>System.Void System.Diagnostics.EventLog::CreateEventSource(System.Diagnostics.EventSourceCreationData)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>XmlConfigurator</class>
+        <caller>void Configure(ILoggerRepository, Uri)</caller>
+        <method>ICredentials get_DefaultCredentials()</method>
+        <raw>System.Net.ICredentials System.Net.CredentialCache::get_DefaultCredentials()</raw>
+        <data>Need EnvironmentPermission implementation first</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>IntPtr GetStdHandle(uint)</method>
+        <raw>System.IntPtr log4net.Appender.ColoredConsoleAppender::GetStdHandle(System.UInt32)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>IntPtr GetStdHandle(uint)</method>
+        <raw>System.IntPtr log4net.Appender.ColoredConsoleAppender::GetStdHandle(System.UInt32)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>bool GetConsoleScreenBufferInfo(IntPtr, ColoredConsoleAppender/CONSOLE_SCREEN_BUFFER_INFO&amp;)</method>
+        <raw>System.Boolean log4net.Appender.ColoredConsoleAppender::GetConsoleScreenBufferInfo(System.IntPtr,log4net.Appender.ColoredConsoleAppender/CONSOLE_SCREEN_BUFFER_INFO&amp;)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>bool SetConsoleTextAttribute(IntPtr, UInt16)</method>
+        <raw>System.Boolean log4net.Appender.ColoredConsoleAppender::SetConsoleTextAttribute(System.IntPtr,System.UInt16)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>bool SetConsoleTextAttribute(IntPtr, UInt16)</method>
+        <raw>System.Boolean log4net.Appender.ColoredConsoleAppender::SetConsoleTextAttribute(System.IntPtr,System.UInt16)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>ColoredConsoleAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>int GetConsoleOutputCP()</method>
+        <raw>System.Int32 log4net.Appender.ColoredConsoleAppender::GetConsoleOutputCP()</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>LocalSyslogAppender</class>
+        <caller>void ActivateOptions()</caller>
+        <method>void openlog(IntPtr, int, LocalSyslogAppender/SyslogFacility)</method>
+        <raw>System.Void log4net.Appender.LocalSyslogAppender::openlog(System.IntPtr,System.Int32,log4net.Appender.LocalSyslogAppender/SyslogFacility)</raw>
+        <data>libc</data>
+      </issue>
+      <issue type="pinv">
+        <class>LocalSyslogAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>void syslog(int, string, string)</method>
+        <raw>System.Void log4net.Appender.LocalSyslogAppender::syslog(System.Int32,System.String,System.String)</raw>
+        <data>libc</data>
+      </issue>
+      <issue type="pinv">
+        <class>LocalSyslogAppender</class>
+        <caller>void OnClose()</caller>
+        <method>void closelog()</method>
+        <raw>System.Void log4net.Appender.LocalSyslogAppender::closelog()</raw>
+        <data>libc</data>
+      </issue>
+      <issue type="pinv">
+        <class>NetSendAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>int NetMessageBufferSend(string, string, string, string, int)</method>
+        <raw>System.Int32 log4net.Appender.NetSendAppender::NetMessageBufferSend(System.String,System.String,System.String,System.String,System.Int32)</raw>
+        <data>netapi32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>OutputDebugStringAppender</class>
+        <caller>void Append(LoggingEvent)</caller>
+        <method>void OutputDebugString(string)</method>
+        <raw>System.Void log4net.Appender.OutputDebugStringAppender::OutputDebugString(System.String)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>NativeError</class>
+        <caller>string GetErrorMessage(int)</caller>
+        <method>int FormatMessage(int, IntPtr&amp;, int, int, String&amp;, int, IntPtr)</method>
+        <raw>System.Int32 log4net.Util.NativeError::FormatMessage(System.Int32,System.IntPtr&amp;,System.Int32,System.Int32,System.String&amp;,System.Int32,System.IntPtr)</raw>
+        <data>Kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>WindowsSecurityContext</class>
+        <caller>WindowsIdentity LogonUser(string, string, string)</caller>
+        <method>bool LogonUser(string, string, string, int, int, IntPtr&amp;)</method>
+        <raw>System.Boolean log4net.Util.WindowsSecurityContext::LogonUser(System.String,System.String,System.String,System.Int32,System.Int32,System.IntPtr&amp;)</raw>
+        <data>advapi32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>WindowsSecurityContext</class>
+        <caller>WindowsIdentity LogonUser(string, string, string)</caller>
+        <method>bool DuplicateToken(IntPtr, int, IntPtr&amp;)</method>
+        <raw>System.Boolean log4net.Util.WindowsSecurityContext::DuplicateToken(System.IntPtr,System.Int32,System.IntPtr&amp;)</raw>
+        <data>advapi32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>WindowsSecurityContext</class>
+        <caller>WindowsIdentity LogonUser(string, string, string)</caller>
+        <method>bool CloseHandle(IntPtr)</method>
+        <raw>System.Boolean log4net.Util.WindowsSecurityContext::CloseHandle(System.IntPtr)</raw>
+        <data>kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>WindowsSecurityContext</class>
+        <caller>WindowsIdentity LogonUser(string, string, string)</caller>
+        <method>bool CloseHandle(IntPtr)</method>
+        <raw>System.Boolean log4net.Util.WindowsSecurityContext::CloseHandle(System.IntPtr)</raw>
+        <data>kernel32.dll</data>
+      </issue>
+      <issue type="pinv">
+        <class>WindowsSecurityContext</class>
+        <caller>WindowsIdentity LogonUser(string, string, string)</caller>
+        <method>bool CloseHandle(IntPtr)</method>
+        <raw>System.Boolean log4net.Util.WindowsSecurityContext::CloseHandle(System.IntPtr)</raw>
+        <data>kernel32.dll</data>
+      </issue>
+    </assembly>
+    <assembly name="Lucene.Net.dll" version="2.3.1.3" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
+      <issue type="todo">
+        <class>RemoteSearchable</class>
+        <caller>void Main(String[])</caller>
+        <method>void Configure(string, bool)</method>
+        <raw>System.Void System.Runtime.Remoting.RemotingConfiguration::Configure(System.String,System.Boolean)</raw>
+        <data>Implement ensureSecurity</data>
+      </issue>
+    </assembly>
+    <assembly name="NHibernate.ByteCode.Castle.dll" version="2.1.2.4000" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="NHibernate.dll" version="2.1.2.4000" runtime="2.0" todo="7" niex="16" miss="0" pinv="0">
+      <issue type="todo">
+        <class>EmitUtil</class>
+        <caller>void EmitCreateDelegateInstance(ILGenerator, Type, MethodInfo)</caller>
+        <method>void EmitCall(OpCode, MethodInfo, Type[])</method>
+        <raw>System.Void System.Reflection.Emit.ILGenerator::EmitCall(System.Reflection.Emit.OpCode,System.Reflection.MethodInfo,System.Type[])</raw>
+        <data>vararg methods are not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>ConnectionProvider</class>
+        <caller>string GetNamedConnectionString(String, String&gt;)</caller>
+        <method>ConnectionStringSettingsCollection get_ConnectionStrings()</method>
+        <raw>System.Configuration.ConnectionStringSettingsCollection System.Configuration.ConfigurationManager::get_ConnectionStrings()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>BasicPropertyAccessor/BasicGetter</class>
+        <caller>void Emit(ILGenerator)</caller>
+        <method>void EmitCall(OpCode, MethodInfo, Type[])</method>
+        <raw>System.Void System.Reflection.Emit.ILGenerator::EmitCall(System.Reflection.Emit.OpCode,System.Reflection.MethodInfo,System.Type[])</raw>
+        <data>vararg methods are not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>BasicPropertyAccessor/BasicSetter</class>
+        <caller>void Emit(ILGenerator)</caller>
+        <method>void EmitCall(OpCode, MethodInfo, Type[])</method>
+        <raw>System.Void System.Reflection.Emit.ILGenerator::EmitCall(System.Reflection.Emit.OpCode,System.Reflection.MethodInfo,System.Type[])</raw>
+        <data>vararg methods are not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>AdoNetWithDistrubtedTransactionFactory</class>
+        <caller>void EnlistInDistributedTransactionIfNeeded(ISessionImplementor)</caller>
+        <method>Enlistment EnlistVolatile(IEnlistmentNotification, EnlistmentOptions)</method>
+        <raw>System.Transactions.Enlistment System.Transactions.Transaction::EnlistVolatile(System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)</raw>
+        <data>EnlistmentOptions being ignored</data>
+      </issue>
+      <issue type="todo">
+        <class>AdoNetWithDistrubtedTransactionFactory/DistributedTransactionContext</class>
+        <caller>void System.Transactions.IEnlistmentNotification.Prepare(PreparingEnlistment)</caller>
+        <method>void Prepared()</method>
+        <raw>System.Void System.Transactions.PreparingEnlistment::Prepared()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>AdoNetWithDistrubtedTransactionFactory/DistributedTransactionContext</class>
+        <caller>void System.Transactions.IEnlistmentNotification.Prepare(PreparingEnlistment)</caller>
+        <method>void ForceRollback(Exception)</method>
+        <raw>System.Void System.Transactions.PreparingEnlistment::ForceRollback(System.Exception)</raw>
+        <data />
+      </issue>
+      <issue type="niex">
+        <class>AbstractDataBaseSchema</class>
+        <caller>DataTable GetTables(string, string, string, String[])</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>AbstractDataBaseSchema</class>
+        <caller>DataTable GetColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>AbstractDataBaseSchema</class>
+        <caller>DataTable GetIndexInfo(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>AbstractDataBaseSchema</class>
+        <caller>DataTable GetIndexColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>AbstractDataBaseSchema</class>
+        <caller>DataTable GetForeignKeys(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>OracleDataBaseSchema</class>
+        <caller>DataTable GetTables(string, string, string, String[])</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>OracleDataBaseSchema</class>
+        <caller>DataTable GetColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>OracleDataBaseSchema</class>
+        <caller>DataTable GetIndexColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>OracleDataBaseSchema</class>
+        <caller>DataTable GetIndexInfo(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>OracleDataBaseSchema</class>
+        <caller>DataTable GetForeignKeys(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SybaseAnywhereDataBaseMetaData</class>
+        <caller>DataTable GetTables(string, string, string, String[])</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SybaseAnywhereDataBaseMetaData</class>
+        <caller>DataTable GetIndexInfo(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SybaseAnywhereDataBaseMetaData</class>
+        <caller>DataTable GetIndexColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SybaseAnywhereDataBaseMetaData</class>
+        <caller>DataTable GetColumns(string, string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SybaseAnywhereDataBaseMetaData</class>
+        <caller>DataTable GetForeignKeys(string, string, string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>AdoNetWithDistrubtedTransactionFactory/&lt;&gt;c__DisplayClass1</class>
+        <caller>void &lt;EnlistInDistributedTransactionIfNeeded&gt;b__0(Object, TransactionEventArgs)</caller>
+        <method>Transaction get_Transaction()</method>
+        <raw>System.Transactions.Transaction System.Transactions.TransactionEventArgs::get_Transaction()</raw>
+      </issue>
+    </assembly>
+    <assembly name="NHibernate.Linq.dll" version="1.1.0.1001" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="NHibernate.Search.dll" version="2.0.0.1001" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="System.Data.SQLite.dll" version="1.0.61.0" runtime="2.0" todo="3" niex="8" miss="0" pinv="82">
+      <issue type="todo">
+        <class>SQLiteEnlistment</class>
+        <caller>void Prepare(PreparingEnlistment)</caller>
+        <method>void Prepared()</method>
+        <raw>System.Void System.Transactions.PreparingEnlistment::Prepared()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>SQLiteEnlistment</class>
+        <caller>void .ctor(SQLiteConnection, Transaction)</caller>
+        <method>Enlistment EnlistVolatile(IEnlistmentNotification, EnlistmentOptions)</method>
+        <raw>System.Transactions.Enlistment System.Transactions.Transaction::EnlistVolatile(System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)</raw>
+        <data>EnlistmentOptions being ignored</data>
+      </issue>
+      <issue type="todo">
+        <class>SQLiteConnectionStringBuilder</class>
+        <caller>void Initialize(string)</caller>
+        <method>void GetProperties(Hashtable)</method>
+        <raw>System.Void System.Data.Common.DbConnectionStringBuilder::GetProperties(System.Collections.Hashtable)</raw>
+        <data />
+      </issue>
+      <issue type="niex">
+        <class>SQLiteConnection</class>
+        <caller>DataTable GetSchema()</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteConnection</class>
+        <caller>DataTable GetSchema(string)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteKeyReader</class>
+        <caller>void .ctor(SQLiteConnection, SQLiteDataReader, SQLiteStatement)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteKeyReader</class>
+        <caller>void .ctor(SQLiteConnection, SQLiteDataReader, SQLiteStatement)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteKeyReader</class>
+        <caller>void .ctor(SQLiteConnection, SQLiteDataReader, SQLiteStatement)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteDataReader</class>
+        <caller>DataTable GetSchemaTable(bool, bool)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteDataReader</class>
+        <caller>DataTable GetSchemaTable(bool, bool)</caller>
+        <method>DataTable GetSchema(string, String[])</method>
+        <raw>System.Data.DataTable System.Data.Common.DbConnection::GetSchema(System.String,System.String[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>SQLiteConnectionStringBuilder</class>
+        <caller>void Initialize(string)</caller>
+        <method>void GetProperties(Hashtable)</method>
+        <raw>System.Void System.Data.Common.DbConnectionStringBuilder::GetProperties(System.Collections.Hashtable)</raw>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteConnection</class>
+        <caller>void CompressFile(string)</caller>
+        <method>int sqlite3_compressfile(string)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_compressfile(System.String)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteConnection</class>
+        <caller>void DecompressFile(string)</caller>
+        <method>int sqlite3_decompressfile(string)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_decompressfile(System.String)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>string SQLiteLastError(SQLiteConnectionHandle)</caller>
+        <method>IntPtr sqlite3_errmsg_interop(IntPtr, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_errmsg_interop(System.IntPtr,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>void FinalizeStatement(SQLiteStatementHandle)</caller>
+        <method>int sqlite3_finalize_interop(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_finalize_interop(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>void CloseConnection(SQLiteConnectionHandle)</caller>
+        <method>int sqlite3_close_interop(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_close_interop(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>void ResetConnection(SQLiteConnectionHandle)</caller>
+        <method>IntPtr sqlite3_next_stmt(IntPtr, IntPtr)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_next_stmt(System.IntPtr,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>void ResetConnection(SQLiteConnectionHandle)</caller>
+        <method>int sqlite3_reset_interop(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_reset_interop(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLiteBase</class>
+        <caller>void ResetConnection(SQLiteConnectionHandle)</caller>
+        <method>int sqlite3_exec(IntPtr, Byte[], IntPtr, IntPtr, IntPtr&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_exec(System.IntPtr,System.Byte[],System.IntPtr,System.IntPtr,System.IntPtr&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Cancel()</caller>
+        <method>void sqlite3_interrupt(IntPtr)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_interrupt(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string get_SQLiteVersion()</caller>
+        <method>IntPtr sqlite3_libversion()</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_libversion()</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int get_Changes()</caller>
+        <method>int sqlite3_changes(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_changes(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Open(string, SQLiteOpenFlagsEnum, int, bool)</caller>
+        <method>int sqlite3_open_interop(Byte[], int, IntPtr&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_open_interop(System.Byte[],System.Int32,System.IntPtr&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void SetTimeout(int)</caller>
+        <method>int sqlite3_busy_timeout(IntPtr, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_busy_timeout(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>bool Step(SQLiteStatement)</caller>
+        <method>int sqlite3_step(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_step(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int Reset(SQLiteStatement)</caller>
+        <method>int sqlite3_reset_interop(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_reset_interop(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>SQLiteStatement Prepare(SQLiteConnection, string, SQLiteStatement, uint, String&amp;)</caller>
+        <method>int sqlite3_prepare_interop(IntPtr, IntPtr, int, IntPtr&amp;, IntPtr&amp;, Int32&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_prepare_interop(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr&amp;,System.IntPtr&amp;,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Double(SQLiteStatement, int, double)</caller>
+        <method>int sqlite3_bind_double(IntPtr, int, double)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_double(System.IntPtr,System.Int32,System.Double)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Int32(SQLiteStatement, int, int)</caller>
+        <method>int sqlite3_bind_int(IntPtr, int, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_int(System.IntPtr,System.Int32,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Int64(SQLiteStatement, int, Int64)</caller>
+        <method>int sqlite3_bind_int64(IntPtr, int, Int64)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_int64(System.IntPtr,System.Int32,System.Int64)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Text(SQLiteStatement, int, string)</caller>
+        <method>int sqlite3_bind_text(IntPtr, int, Byte[], int, IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_text(System.IntPtr,System.Int32,System.Byte[],System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_DateTime(SQLiteStatement, int, DateTime)</caller>
+        <method>int sqlite3_bind_text(IntPtr, int, Byte[], int, IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_text(System.IntPtr,System.Int32,System.Byte[],System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Blob(SQLiteStatement, int, Byte[])</caller>
+        <method>int sqlite3_bind_blob(IntPtr, int, Byte[], int, IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_blob(System.IntPtr,System.Int32,System.Byte[],System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void Bind_Null(SQLiteStatement, int)</caller>
+        <method>int sqlite3_bind_null(IntPtr, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_null(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int Bind_ParamCount(SQLiteStatement)</caller>
+        <method>int sqlite3_bind_parameter_count(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_parameter_count(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string Bind_ParamName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_bind_parameter_name_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_parameter_name_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int Bind_ParamIndex(SQLiteStatement, string)</caller>
+        <method>int sqlite3_bind_parameter_index(IntPtr, Byte[])</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_parameter_index(System.IntPtr,System.Byte[])</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int ColumnCount(SQLiteStatement)</caller>
+        <method>int sqlite3_column_count(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_count(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string ColumnName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_name_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_name_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>TypeAffinity ColumnAffinity(SQLiteStatement, int)</caller>
+        <method>TypeAffinity sqlite3_column_type(IntPtr, int)</method>
+        <raw>System.Data.SQLite.TypeAffinity System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_type(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string ColumnType(SQLiteStatement, int, TypeAffinity&amp;)</caller>
+        <method>IntPtr sqlite3_column_decltype_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_decltype_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string ColumnOriginalName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_origin_name_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_origin_name_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string ColumnDatabaseName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_database_name_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_database_name_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string ColumnTableName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_table_name_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_table_name_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ColumnMetaData(string, string, string, String&amp;, String&amp;, Boolean&amp;, Boolean&amp;, Boolean&amp;)</caller>
+        <method>int sqlite3_table_column_metadata_interop(IntPtr, Byte[], Byte[], Byte[], IntPtr&amp;, IntPtr&amp;, Int32&amp;, Int32&amp;, Int32&amp;, Int32&amp;, Int32&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_table_column_metadata_interop(System.IntPtr,System.Byte[],System.Byte[],System.Byte[],System.IntPtr&amp;,System.IntPtr&amp;,System.Int32&amp;,System.Int32&amp;,System.Int32&amp;,System.Int32&amp;,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>double GetDouble(SQLiteStatement, int)</caller>
+        <method>double sqlite3_column_double(IntPtr, int)</method>
+        <raw>System.Double System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_double(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int GetInt32(SQLiteStatement, int)</caller>
+        <method>int sqlite3_column_int(IntPtr, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_int(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetInt64(SQLiteStatement, int)</caller>
+        <method>Int64 sqlite3_column_int64(IntPtr, int)</method>
+        <raw>System.Int64 System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_int64(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string GetText(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_text_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_text_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>DateTime GetDateTime(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_text_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_text_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetBytes(SQLiteStatement, int, int, Byte[], int, int)</caller>
+        <method>int sqlite3_column_bytes(IntPtr, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_bytes(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetBytes(SQLiteStatement, int, int, Byte[], int, int)</caller>
+        <method>IntPtr sqlite3_column_blob(IntPtr, int)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_blob(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int AggregateCount(IntPtr)</caller>
+        <method>int sqlite3_aggregate_count(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_aggregate_count(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void CreateFunction(string, int, bool, SQLiteCallback, SQLiteCallback, SQLiteFinalCallback)</caller>
+        <method>int sqlite3_create_function_interop(IntPtr, Byte[], int, int, IntPtr, SQLiteCallback, SQLiteCallback, SQLiteFinalCallback, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_create_function_interop(System.IntPtr,System.Byte[],System.Int32,System.Int32,System.IntPtr,System.Data.SQLite.SQLiteCallback,System.Data.SQLite.SQLiteCallback,System.Data.SQLite.SQLiteFinalCallback,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void CreateFunction(string, int, bool, SQLiteCallback, SQLiteCallback, SQLiteFinalCallback)</caller>
+        <method>int sqlite3_create_function_interop(IntPtr, Byte[], int, int, IntPtr, SQLiteCallback, SQLiteCallback, SQLiteFinalCallback, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_create_function_interop(System.IntPtr,System.Byte[],System.Int32,System.Int32,System.IntPtr,System.Data.SQLite.SQLiteCallback,System.Data.SQLite.SQLiteCallback,System.Data.SQLite.SQLiteFinalCallback,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void CreateCollation(string, SQLiteCollation, SQLiteCollation)</caller>
+        <method>int sqlite3_create_collation(IntPtr, Byte[], int, IntPtr, SQLiteCollation)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_create_collation(System.IntPtr,System.Byte[],System.Int32,System.IntPtr,System.Data.SQLite.SQLiteCollation)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void CreateCollation(string, SQLiteCollation, SQLiteCollation)</caller>
+        <method>int sqlite3_create_collation(IntPtr, Byte[], int, IntPtr, SQLiteCollation)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_create_collation(System.IntPtr,System.Byte[],System.Int32,System.IntPtr,System.Data.SQLite.SQLiteCollation)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int ContextCollateCompare(CollationEncodingEnum, IntPtr, string, string)</caller>
+        <method>int sqlite3_context_collcompare(IntPtr, Byte[], int, Byte[], int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_context_collcompare(System.IntPtr,System.Byte[],System.Int32,System.Byte[],System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int ContextCollateCompare(CollationEncodingEnum, IntPtr, Char[], Char[])</caller>
+        <method>int sqlite3_context_collcompare(IntPtr, Byte[], int, Byte[], int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_context_collcompare(System.IntPtr,System.Byte[],System.Int32,System.Byte[],System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>CollationSequence GetCollationSequence(SQLiteFunction, IntPtr)</caller>
+        <method>IntPtr sqlite3_context_collseq(IntPtr, Int32&amp;, Int32&amp;, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_context_collseq(System.IntPtr,System.Int32&amp;,System.Int32&amp;,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetParamValueBytes(IntPtr, int, Byte[], int, int)</caller>
+        <method>int sqlite3_value_bytes(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_bytes(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetParamValueBytes(IntPtr, int, Byte[], int, int)</caller>
+        <method>IntPtr sqlite3_value_blob(IntPtr)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_blob(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>double GetParamValueDouble(IntPtr)</caller>
+        <method>double sqlite3_value_double(IntPtr)</method>
+        <raw>System.Double System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_double(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int GetParamValueInt32(IntPtr)</caller>
+        <method>int sqlite3_value_int(IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_int(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetParamValueInt64(IntPtr)</caller>
+        <method>Int64 sqlite3_value_int64(IntPtr)</method>
+        <raw>System.Int64 System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_int64(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>string GetParamValueText(IntPtr)</caller>
+        <method>IntPtr sqlite3_value_text_interop(IntPtr, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_text_interop(System.IntPtr,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>TypeAffinity GetParamValueType(IntPtr)</caller>
+        <method>TypeAffinity sqlite3_value_type(IntPtr)</method>
+        <raw>System.Data.SQLite.TypeAffinity System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_type(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnBlob(IntPtr, Byte[])</caller>
+        <method>void sqlite3_result_blob(IntPtr, Byte[], int, IntPtr)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_blob(System.IntPtr,System.Byte[],System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnDouble(IntPtr, double)</caller>
+        <method>void sqlite3_result_double(IntPtr, double)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_double(System.IntPtr,System.Double)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnError(IntPtr, string)</caller>
+        <method>void sqlite3_result_error(IntPtr, Byte[], int)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_error(System.IntPtr,System.Byte[],System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnInt32(IntPtr, int)</caller>
+        <method>void sqlite3_result_int(IntPtr, int)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_int(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnInt64(IntPtr, Int64)</caller>
+        <method>void sqlite3_result_int64(IntPtr, Int64)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_int64(System.IntPtr,System.Int64)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnNull(IntPtr)</caller>
+        <method>void sqlite3_result_null(IntPtr)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_null(System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ReturnText(IntPtr, string)</caller>
+        <method>void sqlite3_result_text(IntPtr, Byte[], int, IntPtr)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_text(System.IntPtr,System.Byte[],System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>IntPtr AggregateContext(IntPtr)</caller>
+        <method>IntPtr sqlite3_aggregate_context(IntPtr, int)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_aggregate_context(System.IntPtr,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void SetPassword(Byte[])</caller>
+        <method>int sqlite3_key(IntPtr, Byte[], int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_key(System.IntPtr,System.Byte[],System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void ChangePassword(Byte[])</caller>
+        <method>int sqlite3_rekey(IntPtr, Byte[], int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_rekey(System.IntPtr,System.Byte[],System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void SetUpdateHook(SQLiteUpdateCallback)</caller>
+        <method>IntPtr sqlite3_update_hook(IntPtr, SQLiteUpdateCallback, IntPtr)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_update_hook(System.IntPtr,System.Data.SQLite.SQLiteUpdateCallback,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void SetCommitHook(SQLiteCommitCallback)</caller>
+        <method>IntPtr sqlite3_commit_hook(IntPtr, SQLiteCommitCallback, IntPtr)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_commit_hook(System.IntPtr,System.Data.SQLite.SQLiteCommitCallback,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void SetRollbackHook(SQLiteRollbackCallback)</caller>
+        <method>IntPtr sqlite3_rollback_hook(IntPtr, SQLiteRollbackCallback, IntPtr)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_rollback_hook(System.IntPtr,System.Data.SQLite.SQLiteRollbackCallback,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>int GetCursorForTable(SQLiteStatement, int, int)</caller>
+        <method>int sqlite3_table_cursor(IntPtr, int, int)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_table_cursor(System.IntPtr,System.Int32,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>Int64 GetRowIdForCursor(SQLiteStatement, int)</caller>
+        <method>int sqlite3_cursor_rowid(IntPtr, int, Int64&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_cursor_rowid(System.IntPtr,System.Int32,System.Int64&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3</class>
+        <caller>void GetIndexColumnExtendedInfo(string, string, string, Int32&amp;, Int32&amp;, String&amp;)</caller>
+        <method>int sqlite3_index_column_info_interop(IntPtr, Byte[], Byte[], Byte[], Int32&amp;, Int32&amp;, IntPtr&amp;, Int32&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_index_column_info_interop(System.IntPtr,System.Byte[],System.Byte[],System.Byte[],System.Int32&amp;,System.Int32&amp;,System.IntPtr&amp;,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>void Open(string, SQLiteOpenFlagsEnum, int, bool)</caller>
+        <method>int sqlite3_open16_interop(Byte[], int, IntPtr&amp;)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_open16_interop(System.Byte[],System.Int32,System.IntPtr&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>void Bind_Text(SQLiteStatement, int, string)</caller>
+        <method>int sqlite3_bind_text16(IntPtr, int, string, int, IntPtr)</method>
+        <raw>System.Int32 System.Data.SQLite.UnsafeNativeMethods::sqlite3_bind_text16(System.IntPtr,System.Int32,System.String,System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string ColumnName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_name16_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_name16_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string GetText(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_text16_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_text16_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string ColumnOriginalName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_origin_name16_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_origin_name16_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string ColumnDatabaseName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_database_name16_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_database_name16_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string ColumnTableName(SQLiteStatement, int)</caller>
+        <method>IntPtr sqlite3_column_table_name16_interop(IntPtr, int, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_column_table_name16_interop(System.IntPtr,System.Int32,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>string GetParamValueText(IntPtr)</caller>
+        <method>IntPtr sqlite3_value_text16_interop(IntPtr, Int32&amp;)</method>
+        <raw>System.IntPtr System.Data.SQLite.UnsafeNativeMethods::sqlite3_value_text16_interop(System.IntPtr,System.Int32&amp;)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>void ReturnError(IntPtr, string)</caller>
+        <method>void sqlite3_result_error16(IntPtr, string, int)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_error16(System.IntPtr,System.String,System.Int32)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+      <issue type="pinv">
+        <class>SQLite3_UTF16</class>
+        <caller>void ReturnText(IntPtr, string)</caller>
+        <method>void sqlite3_result_text16(IntPtr, string, int, IntPtr)</method>
+        <raw>System.Void System.Data.SQLite.UnsafeNativeMethods::sqlite3_result_text16(System.IntPtr,System.String,System.Int32,System.IntPtr)</raw>
+        <data>System.Data.SQLite.DLL</data>
+      </issue>
+    </assembly>
+    <assembly name="System.Web.Mvc.dll" version="2.0.0.0" runtime="2.0" todo="11" niex="9" miss="0" pinv="0">
+      <issue type="todo">
+        <class>ParameterInfoUtil</class>
+        <caller>bool TryGetDefaultValue(ParameterInfo, Object&amp;)</caller>
+        <method>Object get_RawDefaultValue()</method>
+        <raw>System.Object System.Reflection.ParameterInfo::get_RawDefaultValue()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>TypeDescriptorHelper/_AssociatedMetadataTypeTypeDescriptionProvider</class>
+        <caller>void .ctor(Type)</caller>
+        <method>TypeDescriptionProvider GetProvider(Type)</method>
+        <raw>System.ComponentModel.TypeDescriptionProvider System.ComponentModel.TypeDescriptor::GetProvider(System.Type)</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>LinqBinaryModelBinder</class>
+        <caller>Object BindModel(ControllerContext, ModelBindingContext)</caller>
+        <method>void .ctor(Byte[])</method>
+        <raw>System.Void System.Data.Linq.Binary::.ctor(System.Byte[])</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>DefaultEditorTemplates</class>
+        <caller>string HiddenInputTemplate(HtmlHelper)</caller>
+        <method>bool op_Inequality(Binary, Binary)</method>
+        <raw>System.Boolean System.Data.Linq.Binary::op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>DefaultEditorTemplates</class>
+        <caller>string HiddenInputTemplate(HtmlHelper)</caller>
+        <method>Byte[] ToArray()</method>
+        <raw>System.Byte[] System.Data.Linq.Binary::ToArray()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>ViewTypeControlBuilder</class>
+        <caller>void ProcessGeneratedCode(CodeCompileUnit, CodeTypeDeclaration, CodeTypeDeclaration, CodeMemberMethod, CodeMemberMethod)</caller>
+        <method>void .ctor(string)</method>
+        <raw>System.Void System.CodeDom.CodeTypeReference::.ctor(System.String)</raw>
+        <data>We should parse basetype from right to left in 2.0 profile.</data>
+      </issue>
+      <issue type="todo">
+        <class>ViewUserControlControlBuilder</class>
+        <caller>void ProcessGeneratedCode(CodeCompileUnit, CodeTypeDeclaration, CodeTypeDeclaration, CodeMemberMethod, CodeMemberMethod)</caller>
+        <method>void .ctor(string)</method>
+        <raw>System.Void System.CodeDom.CodeTypeReference::.ctor(System.String)</raw>
+        <data>We should parse basetype from right to left in 2.0 profile.</data>
+      </issue>
+      <issue type="todo">
+        <class>ViewPageControlBuilder</class>
+        <caller>void ProcessGeneratedCode(CodeCompileUnit, CodeTypeDeclaration, CodeTypeDeclaration, CodeMemberMethod, CodeMemberMethod)</caller>
+        <method>void .ctor(string)</method>
+        <raw>System.Void System.CodeDom.CodeTypeReference::.ctor(System.String)</raw>
+        <data>We should parse basetype from right to left in 2.0 profile.</data>
+      </issue>
+      <issue type="todo">
+        <class>InputExtensions</class>
+        <caller>MvcHtmlString HiddenHelper(HtmlHelper, Object, bool, string, String, Object&gt;)</caller>
+        <method>bool op_Inequality(Binary, Binary)</method>
+        <raw>System.Boolean System.Data.Linq.Binary::op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>InputExtensions</class>
+        <caller>MvcHtmlString HiddenHelper(HtmlHelper, Object, bool, string, String, Object&gt;)</caller>
+        <method>Byte[] ToArray()</method>
+        <raw>System.Byte[] System.Data.Linq.Binary::ToArray()</raw>
+        <data />
+      </issue>
+      <issue type="todo">
+        <class>OutputCacheAttribute/OutputCachedPage</class>
+        <caller>void FrameworkInitialize()</caller>
+        <method>void InitOutputCache(OutputCacheParameters)</method>
+        <raw>System.Void System.Web.UI.Page::InitOutputCache(System.Web.UI.OutputCacheParameters)</raw>
+        <data>The following properties of OutputCacheParameters are silently ignored: CacheProfile, NoStore, SqlDependency</data>
+      </issue>
+      <issue type="niex">
+        <class>ParameterInfoUtil</class>
+        <caller>bool TryGetDefaultValue(ParameterInfo, Object&amp;)</caller>
+        <method>Object get_RawDefaultValue()</method>
+        <raw>System.Object System.Reflection.ParameterInfo::get_RawDefaultValue()</raw>
+      </issue>
+      <issue type="niex">
+        <class>TypeDescriptorHelper/_AssociatedMetadataTypeTypeDescriptionProvider</class>
+        <caller>void .ctor(Type)</caller>
+        <method>TypeDescriptionProvider GetProvider(Type)</method>
+        <raw>System.ComponentModel.TypeDescriptionProvider System.ComponentModel.TypeDescriptor::GetProvider(System.Type)</raw>
+      </issue>
+      <issue type="niex">
+        <class>LinqBinaryModelBinder</class>
+        <caller>Object BindModel(ControllerContext, ModelBindingContext)</caller>
+        <method>void .ctor(Byte[])</method>
+        <raw>System.Void System.Data.Linq.Binary::.ctor(System.Byte[])</raw>
+      </issue>
+      <issue type="niex">
+        <class>DefaultEditorTemplates</class>
+        <caller>string HiddenInputTemplate(HtmlHelper)</caller>
+        <method>bool op_Inequality(Binary, Binary)</method>
+        <raw>System.Boolean System.Data.Linq.Binary::op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)</raw>
+      </issue>
+      <issue type="niex">
+        <class>DefaultEditorTemplates</class>
+        <caller>string HiddenInputTemplate(HtmlHelper)</caller>
+        <method>Byte[] ToArray()</method>
+        <raw>System.Byte[] System.Data.Linq.Binary::ToArray()</raw>
+      </issue>
+      <issue type="niex">
+        <class>ViewUserControlControlBuilder</class>
+        <caller>void .ctor()</caller>
+        <method>void .ctor()</method>
+        <raw>System.Void System.Web.UI.FileLevelUserControlBuilder::.ctor()</raw>
+      </issue>
+      <issue type="niex">
+        <class>ViewPageControlBuilder</class>
+        <caller>void .ctor()</caller>
+        <method>void .ctor()</method>
+        <raw>System.Void System.Web.UI.FileLevelPageControlBuilder::.ctor()</raw>
+      </issue>
+      <issue type="niex">
+        <class>InputExtensions</class>
+        <caller>MvcHtmlString HiddenHelper(HtmlHelper, Object, bool, string, String, Object&gt;)</caller>
+        <method>bool op_Inequality(Binary, Binary)</method>
+        <raw>System.Boolean System.Data.Linq.Binary::op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)</raw>
+      </issue>
+      <issue type="niex">
+        <class>InputExtensions</class>
+        <caller>MvcHtmlString HiddenHelper(HtmlHelper, Object, bool, string, String, Object&gt;)</caller>
+        <method>Byte[] ToArray()</method>
+        <raw>System.Byte[] System.Data.Linq.Binary::ToArray()</raw>
+      </issue>
+    </assembly>
+  </assemblies>
+</report>

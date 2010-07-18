@@ -19,8 +19,8 @@ namespace GalacticAds.Web
             var conf = InPlaceConfigurationSource.BuildForMSSqlServer(".\\sqlexpress", "GalacticAds");
             ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), conf);
             //ActiveRecordStarter.DropSchema();
-            ActiveRecordStarter.CreateSchema();
-            SetUpData();
+            //ActiveRecordStarter.CreateSchema();
+            //SetUpData();
         }
         private static void SetUpData()
         {

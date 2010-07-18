@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<buildInfo>
+  <projectName>GalacticAds</projectName>
+  <companyName>Galactic Ads</companyName>
+  <versionMajor>0</versionMajor>
+  <versionMinor>1</versionMinor>
+  <buildNumber>0</buildNumber>
+  <revision>0</revision>
+  <version>0.1.0.0</version>
+  <repositoryPath>https://RhysC@github.com/RhysC/GalacticAds.git</repositoryPath>
+  <microsoftNetFramework>net-4.0</microsoftNetFramework>
+  <msbuildConfiguration>Release</msbuildConfiguration>
+  <msbuildPlatform>Any CPU</msbuildPlatform>
+  <builtWith>UppercuT v. 0.9.0.306</builtWith>
+</buildInfo>

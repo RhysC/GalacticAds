@@ -1,0 +1,17 @@
+﻿using Castle.ActiveRecord.Framework.Config;
+using Castle.ActiveRecord;
+using System.Reflection;
+
+namespace GalacticAds.Web
+{
+    public class ActiveRecordConfig
+    {
+        public static void Setup()
+        {
+            var conf = InPlaceConfigurationSource
+                .BuildForMSSqlServer("esql2k802.discountasp.net", "SQL2008_739878_galacticads",
+                "gaweb", "zimbabwe");
+            ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), conf);
+        }        
+    }
+}

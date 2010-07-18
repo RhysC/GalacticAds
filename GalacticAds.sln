@@ -3,6 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalacticAds.Web", "GalacticAds.Web\GalacticAds.Web.csproj", "{9100BA99-97E5-49C0-BB4C-4863A8BECB7E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{85C4FFB4-77FF-4004-A96C-5E1BB9FF36C5}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\ELMAH_SQLServer.sql = SQL\ELMAH_SQLServer.sql
+		SQL\GalacticAds_Membership.sql = SQL\GalacticAds_Membership.sql
+		SQL\GalacticAds_Schema.sql = SQL\GalacticAds_Schema.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3FA2562D-1B62-48D8-934F-9C0684094851}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Data\LoadCategories.sql = SQL\Data\LoadCategories.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{C6A453E3-291D-4807-8CEC-DE0B0E107F26}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Queries\FindStoresNearAdvertiser.sql = SQL\Queries\FindStoresNearAdvertiser.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FA2562D-1B62-48D8-934F-9C0684094851} = {85C4FFB4-77FF-4004-A96C-5E1BB9FF36C5}
+		{C6A453E3-291D-4807-8CEC-DE0B0E107F26} = {85C4FFB4-77FF-4004-A96C-5E1BB9FF36C5}
 	EndGlobalSection
 EndGlobal

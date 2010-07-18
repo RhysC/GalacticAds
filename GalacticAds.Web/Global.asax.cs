@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Castle.Core.Logging;
+using Castle.Windsor;
+using Castle.Facilities.Logging;
 
 namespace GalacticAds.Web
 {
@@ -12,6 +15,13 @@ namespace GalacticAds.Web
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        private ILogger logger;
+        public ILogger Logger
+        {
+            get { return logger ?? NullLogger.Instance; }
+            set { logger = value; }
+        }
+
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -30,6 +40,16 @@ namespace GalacticAds.Web
 
             RegisterRoutes(RouteTable.Routes);
             ActiveRecordConfig.Setup();
+            Mappings.RegisterMaps();
+        }
+
+        private void ContainerRegistration()
+        {
+            var container = new WindsorContainer();
+            //install all installers
+            //container.Install(   new RepositoriesInstaller(),
+            //container.AddFacility(
+
         }
     }
 }

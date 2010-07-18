@@ -4,12 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GalacticAds.Web.Models;
+using GalacticAds.Web.Services;
 using NHibernate.Criterion;
 using Castle.ActiveRecord.Queries;
 using Castle.ActiveRecord;
+using GalacticAds.Web.Models.ViewModels;
 
 namespace GalacticAds.Web.Controllers
 {
+    [Authorize]
     public class AdvertiserController : Controller
     {
         public ActionResult Index()
@@ -20,6 +23,24 @@ namespace GalacticAds.Web.Controllers
         public ActionResult Details(int id)
         {
             return View(Advertiser.Find(id));
+        }
+
+        public ActionResult FindLocalStores(int id)
+        {
+            var advertiser = Advertiser.Find(id);
+            var stores = new LocationQueryService().FindAdvertisersLocalStores(id, 5);
+            var result = new ProximityResult
+            {
+                Record = new MapItem
+                {
+                    Id = advertiser.Id,
+                    Name = advertiser.Name,
+                    Latitude = advertiser.GeographicalLocation.Latitude,
+                    Longitude = advertiser.GeographicalLocation.Longitude
+                },
+                Associations = stores
+            };
+            return View(result);
         }
 
         public ActionResult Create()
@@ -69,6 +90,7 @@ namespace GalacticAds.Web.Controllers
             {
                 var existingAdvertiser = Advertiser.Find(id);
                 TryUpdateModel(existingAdvertiser);
+                existingAdvertiser.SaveAndFlush();
                 return RedirectToAction("Index");
             }
             catch
