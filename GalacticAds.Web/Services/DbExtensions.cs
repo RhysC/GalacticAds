@@ -9,7 +9,7 @@ using AutoMapper;
 
 namespace GalacticAds.Web.Services
 {
-        public static class DbExtensions
+    public static class DbExtensions
     {
         public static T ExecuteStoredProc<T>(string storedProcName, IDictionary<string, object> parameters)
         {
@@ -18,7 +18,7 @@ namespace GalacticAds.Web.Services
             try
             {
                 var cmd = session.Connection.CreateCommand();
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = storedProcName;
                 foreach (var parameter in parameters)
                 {

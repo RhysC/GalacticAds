@@ -12,15 +12,14 @@
     <script type="text/javascript" src="../../Scripts/jquery-1.4.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            globalAjaxCursorChange();
             initialize();
         });
         function initialize() {
-            alert("enter");
             var lat = <%: Model.Record.Latitude %>
             var lng = <%: Model.Record.Longitude %>
             var latlng = new google.maps.LatLng(lat, lng);
-            alert(latlng);
-
+           
             var myOptions = {
                 zoom: 12,
                 center: latlng,
@@ -29,14 +28,19 @@
             var map = new google.maps.Map(element, myOptions);
 
             var name = "<%: Model.Record.Name %>"
-            alert("pre-marker " + name);
-            var marker = new google.maps.Marker({position: latlng, title: name, map: map});
-            alert("post-marker " + name);
-
+            var advertiser = new google.maps.Marker({position: latlng, title: name, map: map});
+           
             <% foreach (var association in Model.Associations) { %>  
-            var marker = new google.maps.Marker({position: new google.maps.LatLng(<%: association.Latitude %>, <%: association.Longitude %>), 
+            var store<%: association.Id %> = new google.maps.Marker({position: new google.maps.LatLng(<%: association.Latitude %>, <%: association.Longitude %>), 
                                                 title: "<%: association.Name %>", 
                                                 map: map}); 
+            
+            google.maps.event.addListener(store<%: association.Id %>, 'click', function() {
+                $.get('/Store/Summary/<%: association.Id %>', function(data) {
+                    var infowindow = new google.maps.InfoWindow({ content: data })
+                    infowindow.open(map, store<%: association.Id %>);
+                });
+            });
             <% } %>  
         }
     

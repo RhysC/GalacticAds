@@ -347,3 +347,7 @@ div#title
 {
     width: 6em;
 }
+
+html.busy, html.busy * {
+  cursor: wait !important;
+}

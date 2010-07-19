@@ -22,6 +22,11 @@ namespace GalacticAds.Web.Controllers
             return View(Store.Find(id));
         }
 
+        public ActionResult Summary(int id)
+        {
+            return View(Store.Find(id));
+        }
+
         public ActionResult Map(int id)
         {
             return View(Store.Find(id));

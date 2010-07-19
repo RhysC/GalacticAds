@@ -157,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Views\Advertiser\Create.aspx" />
     <Content Include="Views\Advertiser\Delete.aspx" />
     <Content Include="Views\Advertiser\Details.aspx" />
@@ -165,6 +166,7 @@
     <Content Include="Views\Advertiser\Index.aspx" />
     <Content Include="Views\Shared\AddressDetail.ascx" />
     <Content Include="Views\Shared\AddressEdit.ascx" />
+    <Content Include="Views\Store\Summary.ascx" />
     <Content Include="Views\Store\Create.aspx" />
     <Content Include="Views\Store\Delete.aspx" />
     <Content Include="Views\Store\Details.aspx" />

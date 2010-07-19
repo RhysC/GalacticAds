@@ -30,5 +30,22 @@ namespace GalacticAds.Web.Models
         public decimal Latitude { get; set; }
         [Property]
         public decimal Longitude { get; set; }
+
+        public override string ToString()
+        {
+            var x = new List<object>();
+            AddToListIfNotNullOrWhiteSpace(x, StreetAddress);
+            AddToListIfNotNullOrWhiteSpace(x, Suburb);
+            AddToListIfNotNullOrWhiteSpace(x, City);
+            AddToListIfNotNullOrWhiteSpace(x, PostCode);
+            AddToListIfNotNullOrWhiteSpace(x, Provence);
+            AddToListIfNotNullOrWhiteSpace(x, Country);
+            return string.Join(", ", x);
+        }
+        private static void AddToListIfNotNullOrWhiteSpace(IList<object> list,string value)
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+                list.Add(value);
+        }
     }
 }
