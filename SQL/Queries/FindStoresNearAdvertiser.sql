@@ -39,6 +39,6 @@ BEGIN
 		Store s
 			inner join 
 		Address a on s.GeographicalLocation = a.Id
-	WHERE a.Location.STDistance(@AdvertiserLocation) < @DistanceInKm
+	WHERE a.Location.STDistance(@AdvertiserLocation) < @DistanceInKm * 1000
 END
 GO
