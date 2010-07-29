@@ -3,7 +3,7 @@
   <metadata>
     <definitions>Mono 2.4 (Revised)</definitions>
     <momaversion>2.0.0.0</momaversion>
-    <date>2010-06-29 22:53:46Z</date>
+    <date>2010-07-25 22:47:24Z</date>
     <name />
     <email />
     <homepage />
@@ -13,6 +13,28 @@
   </metadata>
   <assemblies>
     <assembly name="Antlr3.Runtime.dll" version="3.1.0.39271" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="AutoMapper.dll" version="1.1.0.188" runtime="2.0" todo="2" niex="1" miss="0" pinv="0">
+      <issue type="todo">
+        <class>DiagnosticsLogger</class>
+        <caller>void .ctor(string, string, string)</caller>
+        <method>bool SourceExists(string, string)</method>
+        <raw>System.Boolean System.Diagnostics.EventLog::SourceExists(System.String,System.String)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="todo">
+        <class>DiagnosticsLogger</class>
+        <caller>void .ctor(string, string, string)</caller>
+        <method>void CreateEventSource(EventSourceCreationData)</method>
+        <raw>System.Void System.Diagnostics.EventLog::CreateEventSource(System.Diagnostics.EventSourceCreationData)</raw>
+        <data>remote machine is not supported</data>
+      </issue>
+      <issue type="niex">
+        <class>SlimReadWriteLock</class>
+        <caller>void .ctor()</caller>
+        <method>void .ctor(LockRecursionPolicy)</method>
+        <raw>System.Void System.Threading.ReaderWriterLockSlim::.ctor(System.Threading.LockRecursionPolicy)</raw>
+      </issue>
+    </assembly>
     <assembly name="Castle.ActiveRecord.dll" version="2.1.0.0" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
       <issue type="todo">
         <class>InPlaceConfigurationSource</class>

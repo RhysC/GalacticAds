@@ -8,9 +8,9 @@ namespace GalacticAds.Web
     {
         public static void Setup()
         {
-            var conf = InPlaceConfigurationSource
-                .BuildForMSSqlServer("esql2k802.discountasp.net", "SQL2008_739878_galacticads",
-                "gaweb", "zimbabwe");
+            var connString = WebConfigurationManager.ConnectionStrings["GalacticAds"];
+            var conf = InPlaceConfigurationSource.Build(DatabaseType.MsSqlServer2008, 
+                                                        connString.ConnectionString);
             ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), conf);
         }        
     }

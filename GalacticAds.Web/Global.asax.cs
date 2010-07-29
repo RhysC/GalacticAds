@@ -7,7 +7,10 @@ using System.Web.Routing;
 using Castle.Core.Logging;
 using Castle.Windsor;
 using Castle.Facilities.Logging;
+using log4net;
+using log4net.Config;
 
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
 namespace GalacticAds.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -15,13 +18,7 @@ namespace GalacticAds.Web
 
     public class MvcApplication : System.Web.HttpApplication
     {
-        private ILogger logger;
-        public ILogger Logger
-        {
-            get { return logger ?? NullLogger.Instance; }
-            set { logger = value; }
-        }
-
+        private static readonly ILog log = LogManager.GetLogger(typeof(MvcApplication));
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -31,25 +28,21 @@ namespace GalacticAds.Web
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
-
         }
 
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             RegisterRoutes(RouteTable.Routes);
+
             ActiveRecordConfig.Setup();
             Mappings.RegisterMaps();
         }
 
-        private void ContainerRegistration()
+        protected void Application_Error(object sender, EventArgs e)
         {
-            var container = new WindsorContainer();
-            //install all installers
-            //container.Install(   new RepositoriesInstaller(),
-            //container.AddFacility(
-
+            Exception ex = Server.GetLastError();
+            log.Error(ex);
         }
     }
 }

@@ -1,43 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Castle.ActiveRecord.Framework.Config;
-using System.Collections;
+﻿using Castle.ActiveRecord.Framework.Config;
 using Castle.ActiveRecord;
-using GalacticAds.Web.Models;
 using System.Reflection;
-using System.Data.SqlClient;
-using System.IO;
+using System.Web.Configuration;
+using System.Linq;
+using log4net;
 
 namespace GalacticAds.Web
 {
     public class ActiveRecordConfig
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(MvcApplication));
         public static void Setup()
         {
-            var conf = InPlaceConfigurationSource.BuildForMSSqlServer(".\\sqlexpress", "GalacticAds");
+            var connString = WebConfigurationManager.ConnectionStrings["GalacticAds"];
+            LogSanitisedConnectionString(connString);
+            var conf = InPlaceConfigurationSource.Build(DatabaseType.MsSqlServer2008, 
+                                                        connString.ConnectionString);
             ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), conf);
-            //ActiveRecordStarter.DropSchema();
-            //ActiveRecordStarter.CreateSchema();
-            //SetUpData();
         }
-        private static void SetUpData()
+
+        private static void LogSanitisedConnectionString(System.Configuration.ConnectionStringSettings connString)
         {
-            var categoryLoadSql = File.ReadAllText(@"D:\Code\Projects\GalacticAds\GalacticAds.Web\SQL\Data\LoadCategories.sql");
-            using (var connection = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=GalacticAds;Integrated Security=True"))
-            {
-                connection.Open();
-                using (var tx = connection.BeginTransaction())
-                using (var cmd = connection.CreateCommand())
-                {
-                    cmd.Transaction = tx;
-                    cmd.CommandText = categoryLoadSql;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    tx.Commit();
-                }
-            }
+            var elements = connString.ConnectionString.Split(';')
+                .Where(x => x.ToLowerInvariant().StartsWith("data source=") ||
+                           x.ToLowerInvariant().StartsWith("initial catalog="));
+            foreach (var element in elements)
+                log.Info(element);
         }
     }
 }

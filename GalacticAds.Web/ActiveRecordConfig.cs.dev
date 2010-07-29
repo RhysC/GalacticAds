@@ -16,16 +16,18 @@ namespace GalacticAds.Web
     {
         public static void Setup()
         {
-            var conf = InPlaceConfigurationSource.BuildForMSSqlServer(".\\sqlexpress", "GalacticAds");
+             var connString = WebConfigurationManager.ConnectionStrings["GalacticAds"];
+            var conf = InPlaceConfigurationSource.Build(DatabaseType.MsSqlServer2008, 
+                                                        connString.ConnectionString);
             ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), conf);
             //ActiveRecordStarter.DropSchema();
             ActiveRecordStarter.CreateSchema();
-            SetUpData();
+            SetUpData(connString.ConnectionString);
         }
-        private static void SetUpData()
+        private static void SetUpData(string connstr)
         {
             var categoryLoadSql = File.ReadAllText(@"D:\Code\Projects\GalacticAds\GalacticAds.Web\SQL\Data\LoadCategories.sql");
-            using (var connection = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=GalacticAds;Integrated Security=True"))
+            using (var connection = new SqlConnection(connstr))
             {
                 connection.Open();
                 using (var tx = connection.BeginTransaction())
