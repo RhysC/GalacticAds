@@ -1,0 +1,282 @@
+2010-08-11 17:43:56,601 [39] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:43:56,619 [39] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:43:56,619 [39] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:43:56,620 [39] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:43:56,620 [39] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:43:56,620 [39] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:43:56,621 [39] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:43:56,621 [39] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:43:56,621 [39] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:43:58,330 [39] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute command: UPDATE StoreContract SET StartDate = @p0, TermInMonths = @p1, AgreedPricePerNonPrintedRoll = @p2, AgreedPricePerPrintedRoll = @p3, AgreedShippingRate = @p4, Document = @p5, DocumentMimeType = @p6, DocumentFileName = @p7, StoreId = @p8 WHERE Id = @p9
+System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+2010-08-11 17:43:58,547 [39] WARN  NHibernate.Util.ADOExceptionReporter [(null)] - System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+2010-08-11 17:43:58,548 [39] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2010-08-11 17:43:58,626 [39] ERROR NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not update: [GalacticAds.Web.Models.StoreContract#1][SQL: UPDATE StoreContract SET StartDate = ?, TermInMonths = ?, AgreedPricePerNonPrintedRoll = ?, AgreedPricePerPrintedRoll = ?, AgreedShippingRate = ?, Document = ?, DocumentMimeType = ?, DocumentFileName = ?, StoreId = ? WHERE Id = ?] ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   --- End of inner exception stack trace ---
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.UpdateOrInsert(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Int32[] dirtyFields, Boolean hasDirtyCollection, Object[] oldFields, Object oldVersion, Object obj, Object rowId, ISessionImplementor session)
+   at NHibernate.Action.EntityUpdateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+2010-08-11 17:45:19,160 [39] ERROR GalacticAds.Web.MvcApplication [(null)] - Castle.ActiveRecord.Framework.ActiveRecordException: Could not perform Save for Store ---> NHibernate.Exceptions.GenericADOException: could not update: [GalacticAds.Web.Models.StoreContract#1][SQL: UPDATE StoreContract SET StartDate = ?, TermInMonths = ?, AgreedPricePerNonPrintedRoll = ?, AgreedPricePerPrintedRoll = ?, AgreedShippingRate = ?, Document = ?, DocumentMimeType = ?, DocumentFileName = ?, StoreId = ? WHERE Id = ?] ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   --- End of inner exception stack trace ---
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.UpdateOrInsert(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Int32[] dirtyFields, Boolean hasDirtyCollection, Object[] oldFields, Object oldVersion, Object obj, Object rowId, ISessionImplementor session)
+   at NHibernate.Action.EntityUpdateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at Castle.ActiveRecord.ActiveRecordBase.InternalSave(Object instance, Boolean flush)
+   --- End of inner exception stack trace ---
+   at Castle.ActiveRecord.ActiveRecordBase.InternalSave(Object instance, Boolean flush)
+   at Castle.ActiveRecord.ActiveRecordBase.SaveAndFlush(Object instance)
+   at Castle.ActiveRecord.ActiveRecordBase.SaveAndFlush()
+   at GalacticAds.Web.Controllers.StoreContractController.Create(Int32 id, FormCollection collection) in D:\Code\Projects\GalacticAds\GalacticAds.Web\Controllers\StoreContractController.cs:line 49
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassd.<InvokeActionMethodWithFilters>b__a()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassd.<>c__DisplayClassf.<InvokeActionMethodWithFilters>b__c()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__4()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:45:20,795 [43] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:45:55,904 [28] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:48:19,502 [10] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 17:48:19,625 [10] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 17:48:19,674 [10] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 17:48:19,809 [10] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:19,809 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,809 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,809 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,810 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,810 [10] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:19,848 [10] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:19,848 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,848 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,848 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:19,849 [10] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:20,007 [10] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:20,007 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:20,008 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:48:20,008 [10] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:20,008 [10] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:48:20,008 [10] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:48:23,377 [44] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:49:36,191 [47] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 17:49:36,226 [47] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 17:49:36,253 [47] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 17:49:36,320 [47] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:49:36,321 [47] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:49:36,321 [47] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:49:36,321 [47] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:49:36,321 [47] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:49:36,321 [47] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:49:38,548 [55] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:51:04,179 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 17:51:04,211 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 17:51:04,238 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 17:51:04,265 [56] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:51:04,265 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:51:04,266 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:51:04,266 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:51:04,266 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:51:04,266 [56] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:51:06,310 [56] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:52:03,912 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 17:52:03,936 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 17:52:03,963 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 17:52:03,990 [56] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:52:03,990 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:52:03,991 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:52:03,991 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:52:03,991 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:52:03,991 [56] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:52:06,116 [57] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 17:53:55,176 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 17:53:55,208 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 17:53:55,299 [56] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 17:53:55,326 [56] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:53:55,326 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:53:55,326 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 17:53:55,326 [56] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:53:55,326 [56] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 17:53:55,327 [56] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 17:53:57,467 [57] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 18:00:23,890 [44] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 18:00:23,941 [44] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 18:00:23,970 [44] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 18:00:24,002 [44] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 18:01:31,543 [23] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 18:01:32,692 [46] INFO  NHibernate.Loader.Loader [(null)] - SELECT store0_.Id as Id1_1_, store0_.Name as Name1_1_, store0_.GeographicalLocation as Geograph3_1_1_, address1_.Id as Id0_0_, address1_.StreetAddress as StreetAd2_0_0_, address1_.Suburb as Suburb0_0_, address1_.City as City0_0_, address1_.PostCode as PostCode0_0_, address1_.Provence as Provence0_0_, address1_.Country as Country0_0_, address1_.Latitude as Latitude0_0_, address1_.Longitude as Longitude0_0_, address1_.IsGeoLocationConfirmed as IsGeoLo10_0_0_ FROM Store store0_ left outer join Address address1_ on store0_.GeographicalLocation=address1_.Id WHERE store0_.Id=@p0
+2010-08-11 18:01:32,724 [46] INFO  NHibernate.Loader.Loader [(null)] - SELECT rollusageh0_.StoreId as StoreId1_, rollusageh0_.Id as Id1_, rollusageh0_.Id as Id5_0_, rollusageh0_.NumberOfRollsUsed as NumberOf2_5_0_, rollusageh0_.StoreId as StoreId5_0_, rollusageh0_.StartDate as StartDate5_0_, rollusageh0_.EndDate as EndDate5_0_ FROM RollUsage rollusageh0_ WHERE rollusageh0_.StoreId=@p0
+2010-08-11 18:01:32,757 [46] INFO  NHibernate.Loader.Loader [(null)] - SELECT contracts0_.StoreId as StoreId1_, contracts0_.Id as Id1_, contracts0_.Id as Id7_0_, contracts0_.StartDate as StartDate7_0_, contracts0_.TermInMonths as TermInMo3_7_0_, contracts0_.AgreedPricePerNonPrintedRoll as AgreedPr4_7_0_, contracts0_.AgreedPricePerPrintedRoll as AgreedPr5_7_0_, contracts0_.AgreedShippingRate as AgreedSh6_7_0_, contracts0_.Document as Document7_0_, contracts0_.DocumentMimeType as Document8_7_0_, contracts0_.DocumentFileName as Document9_7_0_, contracts0_.StoreId as StoreId7_0_ FROM StoreContract contracts0_ WHERE contracts0_.StoreId=@p0
+2010-08-11 18:01:32,787 [46] INFO  NHibernate.Engine.Cascade [(null)] - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 18:01:32,787 [46] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 18:01:32,787 [46] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.Contracts
+2010-08-11 18:01:32,788 [46] INFO  NHibernate.Engine.Cascade [(null)] - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 18:01:32,788 [46] INFO  NHibernate.Engine.Cascade [(null)] - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: GalacticAds.Web.Models.Store.RollUsageHistory
+2010-08-11 18:01:32,788 [46] INFO  NHibernate.Engine.Cascade [(null)] - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: GalacticAds.Web.Models.Store
+2010-08-11 18:01:47,292 [46] ERROR GalacticAds.Web.MvcApplication [(null)] - System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-11 22:17:40,191 [47] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 2.1.2.4000 (2.1.2.4000)
+2010-08-11 22:17:40,348 [47] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2010-08-11 22:17:40,350 [47] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2010-08-11 22:17:40,353 [47] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2010-08-11 22:17:41,996 [47] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MsSql2008Dialect

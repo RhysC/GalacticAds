@@ -20,7 +20,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{C6A4
 		SQL\Queries\FindStoresNearAdvertiser.sql = SQL\Queries\FindStoresNearAdvertiser.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4571EA10-554D-48CA-BDB3-2849DF068942}"
+	ProjectSection(SolutionItems) = preProject
+		GalacticAds.vsmdi = GalacticAds.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalacticAds.Web.Tests", "GalacticAds.Web.Tests\GalacticAds.Web.Tests.csproj", "{407D2108-3436-457A-AD65-FB5D3646CF77}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = GalacticAds.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -30,6 +42,10 @@ Global
 		{9100BA99-97E5-49C0-BB4C-4863A8BECB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9100BA99-97E5-49C0-BB4C-4863A8BECB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9100BA99-97E5-49C0-BB4C-4863A8BECB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{407D2108-3436-457A-AD65-FB5D3646CF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407D2108-3436-457A-AD65-FB5D3646CF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407D2108-3436-457A-AD65-FB5D3646CF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407D2108-3436-457A-AD65-FB5D3646CF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -332,7 +332,10 @@ div#title
 {
     font-weight: bold;       
 }
-
+.display-warning
+{
+    color:Red;
+    }
 .text-box
 {
     width: 30em;

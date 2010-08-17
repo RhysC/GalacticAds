@@ -27,9 +27,11 @@ namespace GalacticAds.Web.Models
         [Property]
         public string Country { get; set; }
         [Property]
-        public decimal Latitude { get; set; }
+        public decimal Latitude { get; protected set; }
         [Property]
-        public decimal Longitude { get; set; }
+        public decimal Longitude { get; protected set; }
+        [Property]
+        public bool IsGeoLocationConfirmed { get; set; }
 
         public override string ToString()
         {
@@ -46,6 +48,19 @@ namespace GalacticAds.Web.Models
         {
             if (!string.IsNullOrWhiteSpace(value))
                 list.Add(value);
+        }
+
+        internal void AddKnownGeoLocation(decimal latitude, decimal longitude)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+            IsGeoLocationConfirmed = true;
+        }
+        internal void AddEstimatedGeoLocation(decimal latitude, decimal longitude)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+            IsGeoLocationConfirmed = false;
         }
     }
 }

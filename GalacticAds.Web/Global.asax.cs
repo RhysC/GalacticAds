@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,8 +10,8 @@ using Castle.Windsor;
 using Castle.Facilities.Logging;
 using log4net;
 using log4net.Config;
+using System.Web.Configuration;
 
-[assembly: log4net.Config.XmlConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
 namespace GalacticAds.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -32,10 +33,13 @@ namespace GalacticAds.Web
 
         protected void Application_Start()
         {
+            XmlConfigurator.Configure(new FileInfo(HttpContext.Current.Server.MapPath("Log4Net.config")));
+
+            log.Info("Application start");
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
-
-            ActiveRecordConfig.Setup();
+            var connString = WebConfigurationManager.ConnectionStrings["GalacticAds"];
+            ActiveRecordConfig.Setup(connString);
             Mappings.RegisterMaps();
         }
 

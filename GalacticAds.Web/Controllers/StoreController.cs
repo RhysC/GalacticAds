@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -21,6 +22,7 @@ namespace GalacticAds.Web.Controllers
         {
             return View(Store.Find(id));
         }
+
 
         public ActionResult Summary(int id)
         {
@@ -44,7 +46,7 @@ namespace GalacticAds.Web.Controllers
             {
                 LocationService.SetGeographicalLocation(newStore.GeographicalLocation);
                 newStore.CreateAndFlush();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = newStore.Id });
             }
             catch (Exception ex)
             {
@@ -52,6 +54,7 @@ namespace GalacticAds.Web.Controllers
                 return View();
             }
         }
+
 
         public ActionResult Edit(int id)
         {
@@ -65,7 +68,7 @@ namespace GalacticAds.Web.Controllers
             {
                 var existingStore = Store.Find(id);
                 TryUpdateModel(existingStore);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = id });
             }
             catch
             {

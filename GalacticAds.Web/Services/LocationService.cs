@@ -35,8 +35,10 @@ namespace GalacticAds.Web.Services
             if (response.Element("status").Value.ToUpperInvariant() != "OK")
                 return;
             var location = response.Element("result").Element("geometry").Element("location");            
-            address.Latitude = decimal.Parse(location.Element("lat").Value);
-            address.Longitude = decimal.Parse(location.Element("lng").Value);
+            
+            var latitude = decimal.Parse(location.Element("lat").Value);
+            var longitude = decimal.Parse(location.Element("lng").Value);
+            address.AddEstimatedGeoLocation(latitude, longitude);
             //$lat = $xmldata.GeocodeResponse.result.geometry.location.lat
             //$lng = $xmldata.GeocodeResponse.result.geometry.location.lng
             //return @{ "Lat" = $lat; "Long" = $lng; "StreetAddress" = $StreetAddress; "City" = $City; "State" = $State; "Zip" = $Zip}	

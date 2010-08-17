@@ -131,11 +131,16 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertiserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreContractController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Mappings.cs" />
+    <Compile Include="Models\DateRange.cs" />
+    <Compile Include="Models\Stores\RollUsage.cs" />
+    <Compile Include="Models\Stores\StoreContract.cs" />
     <Compile Include="Models\ViewModels\MapItem.cs" />
     <Compile Include="Models\ViewModels\ProximityResult.cs" />
     <Compile Include="Services\DbExtensions.cs" />
+    <Compile Include="Services\HttpExtension.cs" />
     <Compile Include="Services\LocationQueryService.cs" />
     <None Include="ActiveRecordConfig.cs.prod" />
     <None Include="ActiveRecordConfig.cs.dev" />
@@ -145,14 +150,14 @@
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\Advert.cs" />
-    <Compile Include="Models\Advertiser.cs" />
-    <Compile Include="Models\AdvertiserCategory.cs" />
-    <Compile Include="Models\Campaign.cs" />
-    <Compile Include="Models\CampaignAdvert.cs" />
+    <Compile Include="Models\Advertisers\Advert.cs" />
+    <Compile Include="Models\Advertisers\Advertiser.cs" />
+    <Compile Include="Models\Advertisers\AdvertiserCategory.cs" />
+    <Compile Include="Models\Advertisers\Campaign.cs" />
+    <Compile Include="Models\Advertisers\CampaignAdvert.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Interfaces\IHaveGeographicalLocation.cs" />
-    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Stores\Store.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Log4Net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -169,6 +174,8 @@
     <Content Include="Views\Advertiser\Index.aspx" />
     <Content Include="Views\Shared\AddressDetail.ascx" />
     <Content Include="Views\Shared\AddressEdit.ascx" />
+    <Content Include="Views\StoreContract\Create.aspx" />
+    <Content Include="Views\StoreContract\Details.aspx" />
     <Content Include="Views\Store\Summary.ascx" />
     <Content Include="Views\Store\Create.aspx" />
     <Content Include="Views\Store\Delete.aspx" />
